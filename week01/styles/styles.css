@@ -14,7 +14,8 @@ nav a{
     color: white;
     text-decoration: none;
 }
-.content-wrapper{
+.content-wrapper{ display: flex; }
+main{
     background-color: #d3d3d3;
     flex: 3;
     min-height: 200px;
