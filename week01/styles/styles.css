@@ -5,6 +5,7 @@ header{
     padding: 40px 20px;
 }
 nav{
+    background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
