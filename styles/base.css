@@ -1,0 +1,35 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+header{
+    background-color: blue;
+    color: white;
+    padding: 40px 20px;
+}
+nav{
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+.content-wrapper{ display: flex; }
+main{
+    background-color: #d3d3d3;
+    flex: 3;
+    min-height: 200px;
+    padding: 20px;
+}
+aside{
+    background-color: #ffffff;
+    flex: 1;
+    padding: 20px;
+}
+footer{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding:40px 20px;
+}
