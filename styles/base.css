@@ -1,35 +1,219 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
-header{
-    background-color: blue;
-    color: white;
-    padding: 40px 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-nav{
-    background-color: black;
+
+:root {
+    --ink: #1a1a2e;
+    --gold: #c9a84c;
+    --gold-light: #f0d99a;
+    --cream: #faf7f0;
+    --warm-mid: #e8e0d0;
+    --text-muted: #6b6560;
+    --white: #ffffff;
+}
+
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+    background-color: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
 }
-nav a{
-    color: white;
-    text-decoration: none;
-}
-.content-wrapper{ display: flex; }
-main{
-    background-color: #d3d3d3;
-    flex: 3;
-    min-height: 200px;
-    padding: 20px;
-}
-aside{
-    background-color: #ffffff;
-    flex: 1;
-    padding: 20px;
-}
-footer{
-    background-color: blue;
-    color: white;
+header {
+    background-color: var(--ink);
+    color: var(--white);
     text-align: center;
-    padding:40px 20px;
+    padding: 30px 20px 20px;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+}
+nav {
+    background-color: #111827;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0 16px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold);
+}
+.content-wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+    gap: 28px;
+    align-items: flex-start;
+}
+main {
+    flex: 3;
+    min-width: 0;
+}
+
+main h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--ink);
+    border-bottom: 3px solid var(--gold);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--warm-mid);
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 4px 4px 0 var(--warm-mid);
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background-color: var(--ink);
+    color: var(--gold-light);
+    padding: 8px 16px;
+    margin: -24px -24px 20px -24px;
+    border-radius: 6px 6px 0 0;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #3d3830;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.card img {
+    display: block;
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 16px 0 8px;
+    color: var(--ink);
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid var(--warm-mid);
+    margin: 16px 0;
+}
+aside {
+    flex: 1;
+    min-width: 220px;
+}
+
+aside .card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background-color: var(--ink);
+    color: var(--gold-light);
+    padding: 8px 16px;
+    margin: -24px -24px 20px -24px;
+    border-radius: 6px 6px 0 0;
+}
+
+aside .card ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside .card ul li {
+    border-bottom: 1px solid var(--warm-mid);
+    padding: 10px 0;
+}
+
+aside .card ul li:last-child {
+    border-bottom: none;
+}
+
+aside .card ul li a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+aside .card ul li a::before {
+    content: '→';
+    color: var(--gold);
+    font-size: 0.85rem;
+}
+
+aside .card ul li a:hover {
+    color: var(--gold);
+}
+footer {
+    background-color: var(--ink);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 0.875rem;
+    margin-top: 40px;
+}
+
+footer p {
+    line-height: 1.8;
+}
+@media (max-width: 700px) {
+    .content-wrapper {
+        flex-direction: column;
+        padding: 0 16px;
+        margin: 24px auto;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav a {
+        padding: 12px 14px;
+        font-size: 0.8rem;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
 }
