@@ -5,17 +5,19 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif; 
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  background-color: #f8fafc; 
-  color: #1e293b; 
+  background-color: #f8fafc;
+  color: #1e293b;
 }
 
 h1, h2, figcaption {
-  font-family: 'Playfair Display', serif; 
+  font-family: 'Playfair Display', serif;
 }
+
 header {
-  background-color: #1e3a8a; 
+  position: relative;
+  background-color: #1e3a8a;
   color: #ffffff;
   padding: 1.5rem 1rem;
   text-align: center;
@@ -27,14 +29,37 @@ header h1 {
   letter-spacing: 0.5px;
 }
 
+#menu-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+#menu-toggle:hover {
+  color: #38bdf8;
+}
+
 nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+nav.open {
   display: flex;
-  flex-direction: column; 
-  gap: 0.5rem; 
 }
 
 nav a {
-  color: #bfdbfe; 
+  color: #bfdbfe;
   text-decoration: none;
   padding: 0.75rem 1rem;
   font-weight: 500;
@@ -43,17 +68,17 @@ nav a {
 }
 
 nav a:hover, nav a:focus {
-  background-color: #3b82f6; 
+  background-color: #3b82f6;
   color: #ffffff;
 }
+
 main {
-  max-width: 1100px; 
-  margin: 2.5rem auto; 
-  padding: 0 1.5rem; 
-  
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
   display: grid;
-  grid-template-columns: 1fr; 
-  gap: 2rem; 
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 main h1 {
@@ -64,6 +89,7 @@ main h1 {
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 figure {
   background-color: #ffffff;
   border-radius: 8px;
@@ -75,7 +101,7 @@ figure {
 
 figure img {
   width: 100%;
-  height: 250px; 
+  height: 250px;
   object-fit: cover;
   display: block;
 }
@@ -87,10 +113,11 @@ figcaption {
   color: #1e3a8a;
   text-align: center;
   background-color: #ffffff;
-  margin-top: auto; 
+  margin-top: auto;
 }
+
 footer {
-  background-color: #0f172a; 
+  background-color: #0f172a;
   color: #94a3b8;
   text-align: center;
   padding: 2rem 1rem;
