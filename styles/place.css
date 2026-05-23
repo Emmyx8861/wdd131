@@ -39,17 +39,31 @@ main {
 
 @media (min-width: 768px) {
     main {
-        flex-direction: row;        
-        flex-wrap: wrap;            
-        justify-content: space-between;
+        position: relative; 
+        display: block; 
+        padding: 0; 
     }
 
-    .hero-container {
-        flex: 1 1 100%;
+    .hero-container img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
-    .data-card, .weather-card {
-        flex: 1 1 calc(50% - var(--padding-standard));
+    .data-card {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        width: 300px; 
+        background-color: rgba(249, 249, 249, 0.9); 
+    }
+
+    .weather-card {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        width: 250px;
+        background-color: rgba(249, 249, 249, 0.9); 
     }
 
     .weather-heading::after {
