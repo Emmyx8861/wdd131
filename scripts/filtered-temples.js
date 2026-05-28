@@ -100,9 +100,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const templeContainer = document.querySelector("main");
 
+  function createTempleImage(temple) {
+    const img = document.createElement("img");
+    img.src = temple.imageUrl;
+    img.alt = temple.templeName;
+    img.loading = "lazy";
+
+    img.onerror = () => {
+      // Prevent infinite loop if the placeholder itself fails
+      img.onerror = null;
+      img.src = "images/placeholder.webp";
+      img.alt = `${temple.templeName} (image unavailable)`;
+    };
+
+    return img;
+  }
+
   function displayTemples(filteredTemples) {
     if (!templeContainer) return;
-    
+
     const heading = templeContainer.querySelector("h1");
     templeContainer.innerHTML = "";
     if (heading) {
@@ -118,8 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><span class="label">Location:</span> ${temple.location}</p>
         <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
         <p><span class="label">Size:</span> ${temple.area} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
       `;
+
+      // Append image via DOM method so onerror fires correctly
+      card.appendChild(createTempleImage(temple));
 
       templeContainer.appendChild(card);
     });
@@ -132,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      
+
       navLinks.forEach(l => l.classList.remove("active"));
       link.classList.add("active");
 
