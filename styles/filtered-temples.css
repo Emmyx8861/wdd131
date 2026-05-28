@@ -104,6 +104,7 @@ figure img {
   height: 250px;
   object-fit: cover;
   display: block;
+  order: -1;
 }
 
 figcaption {
@@ -116,18 +117,6 @@ figcaption {
   margin-top: auto;
 }
 
-footer {
-  background-color: #0f172a;
-  color: #94a3b8;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 5rem;
-  font-size: 0.9rem;
-}
-
-footer p {
-  margin: 0.4rem 0;
-}
 figure p {
   padding: 0.25rem 1.25rem;
   font-size: 0.95rem;
@@ -143,6 +132,15 @@ figure .label {
   color: #1e293b;
 }
 
-figure img {
-  order: -1;
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 5rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.4rem 0;
 }
