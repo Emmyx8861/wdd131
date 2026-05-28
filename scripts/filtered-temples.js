@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
+  const navMenu = document.querySelector("nav");
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
@@ -98,12 +98,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  const templeContainer = document.querySelector(".temple-cards-container") || document.querySelector("main");
+  const templeContainer = document.querySelector("main");
 
   function displayTemples(filteredTemples) {
     if (!templeContainer) return;
     
+    const heading = templeContainer.querySelector("h1");
     templeContainer.innerHTML = "";
+    if (heading) {
+      templeContainer.appendChild(heading);
+    }
 
     filteredTemples.forEach(temple => {
       const card = document.createElement("section");
@@ -123,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   displayTemples(temples);
 
-  const navLinks = document.querySelectorAll("#nav-menu a, .navigation a");
+  const navLinks = document.querySelectorAll("nav a");
 
   navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
