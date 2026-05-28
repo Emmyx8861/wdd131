@@ -128,3 +128,21 @@ footer {
 footer p {
   margin: 0.4rem 0;
 }
+figure p {
+  padding: 0.25rem 1.25rem;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+figure p:last-of-type {
+  padding-bottom: 1.25rem;
+}
+
+figure .label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+figure img {
+  order: -1;
+}
