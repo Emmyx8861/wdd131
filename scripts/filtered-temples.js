@@ -80,14 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
       location: "Salt Lake City, Utah, United States",
       dedicated: "1893, April, 6",
       area: 382207,
-      imageUrl: "https://images.unsplash.com/photo-1596128038593-be5bd67634db?w=400&auto=format&fit=crop&q=80"
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
     },
     {
       templeName: "Frankfurt Germany",
       location: "Friedrichsdorf, Germany",
       dedicated: "1987, August, 28",
       area: 32895,
-      imageUrl: "https://images.unsplash.com/photo-1549880180-4c706c8d199b?w=400&auto=format&fit=crop&q=80"
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/frankfurt-germany-temple/frankfurt-germany-temple-3870-main.jpg"
     },
     {
       templeName: "Johannesburg South Africa",
