@@ -80,14 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
       location: "Salt Lake City, Utah, United States",
       dedicated: "1893, April, 6",
       area: 382207,
-      imageUrl: "https://images.unsplash.com/photo-1596128038593-be5bd67634db?w=400&auto=format&fit=crop&q=80"
+      imageUrl: "https://churchofjesuschrist.org/imgs/7a68e36e133c94d0b135b5a2bf2542a17cb6e1ed/full/320%2C/0/default"
     },
     {
       templeName: "Frankfurt Germany",
       location: "Friedrichsdorf, Germany",
       dedicated: "1987, August, 28",
       area: 32895,
-      imageUrl: "https://images.unsplash.com/photo-1549880180-4c706c8d199b?w=400&auto=format&fit=crop&q=80"
+      imageUrl: "https://churchofjesuschrist.org/imgs/4bc4e02fb62bf3ec1bc42296d9f7833cbca45b4c/full/320%2C/0/default"
     },
     {
       templeName: "Johannesburg South Africa",
