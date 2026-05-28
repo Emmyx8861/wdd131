@@ -111,10 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
         <h3>${temple.templeName}</h3>
-        <p><strong>Location:</strong> ${temple.location}</p>
-        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-        <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" width="400" height="250">
+        <p><span class="label">Location:</span> ${temple.location}</p>
+        <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
+        <p><span class="label">Size:</span> ${temple.area} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
       `;
 
       templeContainer.appendChild(card);
