@@ -80,14 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
       location: "Salt Lake City, Utah, United States",
       dedicated: "1893, April, 6",
       area: 382207,
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Salt_Lake_Temple%2C_Utah_-_Sept_2014-2.jpg/400px-Salt_Lake_Temple%2C_Utah_-_Sept_2014-2.jpg"
+      imageUrl: "https://images.unsplash.com/photo-1596128038593-be5bd67634db?w=400&auto=format&fit=crop&q=80"
     },
     {
       templeName: "Frankfurt Germany",
       location: "Friedrichsdorf, Germany",
       dedicated: "1987, August, 28",
       area: 32895,
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Frankfurt_Germany_Temple.jpg/400px-Frankfurt_Germany_Temple.jpg"
+      imageUrl: "https://images.unsplash.com/photo-1549880180-4c706c8d199b?w=400&auto=format&fit=crop&q=80"
     },
     {
       templeName: "Johannesburg South Africa",
